@@ -1,0 +1,17 @@
+{
+    "name": "AzureDatabricks_ls",
+    "type": "Microsoft.DataFactory/factories/linkedservices",
+    "properties": {
+        "annotations": [],
+        "type": "AzureDatabricks",
+        "typeProperties": {
+            "domain": "https://adb-7405610390119239.19.azuredatabricks.net",
+            "authentication": "MSI",
+            "workspaceResourceId": "/subscriptions/d4910b51-01bb-4866-a0ee-afee3a327522/resourceGroups/resourcegrp1/providers/Microsoft.Databricks/workspaces/databricksyuvaproj1",
+            "credential": {
+                "referenceName": "adf_databricks_credential",
+                "type": "CredentialReference"
+            }
+        }
+    }
+}

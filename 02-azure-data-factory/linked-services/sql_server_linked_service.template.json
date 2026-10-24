@@ -1,0 +1,28 @@
+{
+    "name": "OnPremisesSqlServer_la",
+    "type": "Microsoft.DataFactory/factories/linkedservices",
+    "properties": {
+        "annotations": [],
+        "type": "SqlServer",
+        "typeProperties": {
+            "server": "Yuva\\YUVA",
+            "database": "AdventureWorksLT2017",
+            "encrypt": "mandatory",
+            "trustServerCertificate": true,
+            "authenticationType": "SQL",
+            "userName": "yuvakumar",
+            "password": {
+                "type": "AzureKeyVaultSecret",
+                "store": {
+                    "referenceName": "AzureKeyVault1",
+                    "type": "LinkedServiceReference"
+                },
+                "secretName": "password"
+            }
+        },
+        "connectVia": {
+            "referenceName": "yuva-selfhosted-integration-runtime",
+            "type": "IntegrationRuntimeReference"
+        }
+    }
+}

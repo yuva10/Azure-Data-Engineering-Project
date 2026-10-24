@@ -1,0 +1,13 @@
+{
+    "name": "SqlServerlookup_ds",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "OnPremisesSqlServer_la",
+            "type": "LinkedServiceReference"
+        },
+        "annotations": [],
+        "type": "SqlServerTable",
+        "schema": []
+    },
+    "type": "Microsoft.DataFactory/factories/datasets"
+}
