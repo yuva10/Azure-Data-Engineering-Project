@@ -9,13 +9,18 @@ Azure Data Factory orchestrates data ingestion, Azure Data Lake Storage Gen2 sto
 ## 🏗️ Architecture
 ```mermaid
 flowchart TD
-    A[SQL Server] --> B[Azure Data Factory]
-    B --> C[ADLS Gen2 Bronze]
-    C --> D[Databricks Bronze to Silver]
-    D --> E[ADLS Gen2 Silver]
-    E --> F[Databricks Silver to Gold]
-    F --> G[ADLS Gen2 Gold]
-    G --> H[Azure Synapse Analytics]
-    H -.-> I[Power BI - Planned]
+    A["On-Premises SQL Server"] --> B["Azure Data Factory"]
+    B --> C["ADLS Gen2 - Bronze"]
+    C --> D["Databricks: Bronze to Silver"]
+    D --> E["ADLS Gen2 - Silver"]
+    E --> F["Databricks: Silver to Gold"]
+    F --> G["ADLS Gen2 - Gold"]
+    G --> H["Azure Synapse Analytics"]
+    H -.-> I["Power BI - Planned"]
+
+    J["Azure Key Vault"] -.-> B
+    K["Self-Hosted Integration Runtime"] -.-> B
 ```
+
+
 
